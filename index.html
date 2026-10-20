@@ -1,496 +1,325 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080a0c">
-  <meta name="description" content="MarrakechiMotoStore — Premium motorcycle parts and accessories in Morocco.">
-  <title>MarrakechiMotoStore | Performance. Precision. Power.</title>
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="Découvrez les iPhones chez RedPhone Marrakech. Consultez notre sélection et contactez-nous sur WhatsApp.">
+  <title>RedPhone Marrakech | iPhones & Accessoires</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .product-visual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      min-height: 220px;
-    }
-
-    .product-visual img {
-      display: block;
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
-      padding: 12px;
-    }
-
-    .bike-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      width: 100%;
-      min-height: 280px;
-    }
-
-    .bike-placeholder img {
-      display: block;
-      width: 100%;
-      max-height: 360px;
-      object-fit: contain;
-    }
-
-    .product-image img {
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.04);
-    }
-
-    .contact-form .form-message {
-      overflow-wrap: anywhere;
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-<header class="header" id="header">
-  <div class="container nav">
-    <a href="#home" class="logo">
-      <span class="logo-mark">M</span>
-      <span class="logo-text">MM<span>STORE</span></span>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="RedPhone Marrakech - Accueil">
+      <span class="brand-mark">R</span>
+      <span>REDPHONE <b>MARRAKECH</b></span>
     </a>
 
-    <nav class="nav-menu" id="navMenu">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#products" class="nav-link">Parts</a>
-      <a href="#accessories" class="nav-link">Accessories</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <a href="#products" class="nav-cta">Shop Now</a>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
+    >☰</button>
+
+    <nav id="navLinks" aria-label="Navigation principale">
+      <a href="#home">Accueil</a>
+      <a href="#collection">Nos iPhones</a>
+      <a href="#why">Pourquoi nous</a>
+      <a href="#contact" class="nav-cta">Nous contacter ↗</a>
     </nav>
+  </header>
 
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Open menu" type="button">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="hero-tag">
-          <span class="tag-dot"></span>
-          Premium Moto Parts & Accessories
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="live-dot"></span>
+          REDPHONE MARRAKECH
         </div>
 
-        <h1>PERFORMANCE.<br><span>PRECISION.</span><br>POWER.</h1>
+        <h1>Votre prochain<br>iPhone vous <span>attend.</span></h1>
 
-        <p class="hero-description">
-          Upgrade your ride with premium motorcycle parts
-          and accessories built for riders who demand more.
+        <p class="hero-text">
+          Découvrez notre sélection d'iPhones et trouvez le modèle
+          qui correspond à vos besoins. Pour les disponibilités,
+          les prix et les commandes, contactez directement notre équipe.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#products" class="btn btn-primary">
-            Explore Products <span>→</span>
-          </a>
-          <a href="#contact" class="btn btn-outline">Contact Us</a>
+        <div class="hero-actions">
+          <a class="btn btn-red" href="#collection">Découvrir les iPhones <span>↗</span></a>
+          <a class="btn btn-outline" href="#contact">Nous contacter</a>
         </div>
 
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>Quality</strong>
-            <span>Product Focus</span>
+        <div class="hero-proof">
+          <div class="avatars" aria-hidden="true">
+            <i>R</i><i>+</i><i>✓</i>
           </div>
-          <div class="stat">
-            <strong>Direct</strong>
-            <span>Order Support</span>
-          </div>
-          <div class="stat">
-            <strong>🇲🇦</strong>
-            <span>Morocco</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-circle circle-one"></div>
-        <div class="hero-circle circle-two"></div>
-
-        <div class="hero-bike">
-          <div class="bike-glow"></div>
-          <div class="bike-placeholder">
-            <img src="iphone-16-pro.jpg"
-              alt="Featured product preview">
-          </div>
-        </div>
-
-        <div class="floating-card floating-card-top">
-          <span class="floating-icon">⚡</span>
-          <div><strong>Performance</strong><small>Built to Ride</small></div>
-        </div>
-
-        <div class="floating-card floating-card-bottom">
-          <span class="floating-icon">✓</span>
-          <div><strong>Premium Products</strong><small>Explore the Selection</small></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-scroll">
-      <span>Scroll to explore</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <section class="brand-strip">
-    <div class="container brand-strip-inner">
-      <span>BUILT FOR RIDERS</span>
-      <span>QUALITY PRODUCTS</span>
-      <span>PREMIUM ACCESSORIES</span>
-      <span>MEKNES • MOROCCO</span>
-    </div>
-  </section>
-
-  <section class="products-section section" id="products">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <span class="section-label">OUR SELECTION</span>
-          <h2>Featured <span>Products.</span></h2>
-        </div>
-        <p>Explore our featured products and discover your next upgrade.</p>
-      </div>
-
-      <div class="products-grid">
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Featured</span>
-            <div class="product-visual">
-              <img src="iphone-13.jpg" alt="Featured product 1" loading="lazy">
-            </div>
-            <button class="product-view" type="button" aria-label="View product">+</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">FEATURED</span>
-            <h3>Featured Product 01</h3>
-            <p>Contact us to confirm availability and product details.</p>
-            <div class="product-bottom">
-              <strong>450 DH</strong>
-              <a href="#contact" class="product-order">Ask About It →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Popular</span>
-            <div class="product-visual">
-              <img src="iphone-14.jpg" alt="Featured product 2" loading="lazy">
-            </div>
-            <button class="product-view" type="button" aria-label="View product">+</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">FEATURED</span>
-            <h3>Featured Product 02</h3>
-            <p>Ask our team for information about this product.</p>
-            <div class="product-bottom">
-              <strong>380 DH</strong>
-              <a href="#contact" class="product-order">Ask About It →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">New</span>
-            <div class="product-visual">
-              <img src="iphone-15.jpg" alt="Featured product 3" loading="lazy">
-            </div>
-            <button class="product-view" type="button" aria-label="View product">+</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">FEATURED</span>
-            <h3>Featured Product 03</h3>
-            <p>Contact us for details and current availability.</p>
-            <div class="product-bottom">
-              <strong>650 DH</strong>
-              <a href="#contact" class="product-order">Ask About It →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Essential</span>
-            <div class="product-visual">
-              <img src="iphone-16.jpg" alt="Featured product 4" loading="lazy">
-            </div>
-            <button class="product-view" type="button" aria-label="View product">+</button>
-          </div>
-          <div class="product-info">
-            <span class="product-category">FEATURED</span>
-            <h3>Featured Product 04</h3>
-            <p>Ask us about product options and availability.</p>
-            <div class="product-bottom">
-              <strong>220 DH</strong>
-              <a href="#contact" class="product-order">Ask About It →</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="center-button">
-        <a href="#accessories" class="btn btn-dark">View More <span>→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="accessories-section section" id="accessories">
-    <div class="container">
-      <div class="section-heading centered">
-        <span class="section-label">DISCOVER MORE</span>
-        <h2>Built Around <span>Your Ride.</span></h2>
-        <p>Explore the collection and contact us for product information.</p>
-      </div>
-
-      <div class="accessories-grid">
-        <div class="accessory-card">
-          <div class="accessory-number">01</div>
-          <div class="accessory-icon">🔧</div>
-          <h3>Performance</h3>
-          <p>Explore products for your motorcycle and riding needs.</p>
-          <a href="#contact">Ask Us →</a>
-        </div>
-
-        <div class="accessory-card featured-accessory">
-          <div class="accessory-number">02</div>
-          <div class="accessory-icon">🛡️</div>
-          <h3>Protection</h3>
-          <p>Ask about protective equipment and available options.</p>
-          <a href="#contact">Ask Us →</a>
-        </div>
-
-        <div class="accessory-card">
-          <div class="accessory-number">03</div>
-          <div class="accessory-icon">⚡</div>
-          <h3>Accessories</h3>
-          <p>Discover accessories and find out what is available.</p>
-          <a href="#contact">Ask Us →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-section section">
-    <div class="container why-grid">
-      <div class="why-content">
-        <span class="section-label">WHY MMSTORE</span>
-        <h2>More Than <span>Products.</span></h2>
-        <p>
-          We aim to make it easier for riders to discover products
-          and contact us about their motorcycle needs.
-        </p>
-
-        <div class="features-list">
-          <div class="feature-item">
-            <div class="feature-icon">✓</div>
-            <div>
-              <h3>Product Information</h3>
-              <p>Contact us to confirm specifications and availability.</p>
-            </div>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon">⚡</div>
-            <div>
-              <h3>Helpful Support</h3>
-              <p>Tell us what you are looking for.</p>
-            </div>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon">📦</div>
-            <div>
-              <h3>Direct Enquiries</h3>
-              <p>Send your request through the contact form.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="why-visual">
-        <div class="why-box">
-          <span class="why-small">MMSTORE</span>
-          <strong>RIDE<br>WITH<br>PURPOSE.</strong>
-          <span class="why-line"></span>
-          <small>Meknes • Morocco</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-section section" id="about">
-    <div class="container about-grid">
-      <div class="about-visual">
-        <div class="about-card">
-          <span>EST.</span>
-          <strong>MM</strong>
-          <small>MOTORCYCLE STORE</small>
-        </div>
-      </div>
-
-      <div class="about-content">
-        <span class="section-label">ABOUT MMSTORE</span>
-        <h2>Made For <span>Riders.</span></h2>
-        <p>
-          MarrakechiMotoStore presents a selection of products
-          for motorcycle enthusiasts in Morocco.
-        </p>
-        <p>
-          Contact us to ask about products, availability and ordering.
-        </p>
-
-        <div class="location-box">
-          <span class="location-icon">📍</span>
           <div>
-            <strong>Meknes, Morocco</strong>
-            <small>Please confirm the store address before visiting.</small>
+            <strong>RedPhone Marrakech</strong>
+            <small>Votre prochain smartphone commence ici.</small>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="cta-section">
-    <div class="cta-pattern"></div>
-    <div class="container cta-content">
-      <span class="section-label">READY TO RIDE?</span>
-      <h2>Find Your <span>Next Upgrade.</span></h2>
-      <p>Tell us what you need and ask about product availability.</p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn btn-primary">Contact Us <span>→</span></a>
-        <a href="#products" class="btn btn-light">Browse Products</a>
+      <div class="hero-visual reveal" id="heroVisual">
+        <div class="hero-glow"></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+
+        <div class="phone-stage">
+          <div class="phone phone-back">
+            <img src="iphone-16.jpg" alt="iPhone vu de dos" class="phone-image">
+          </div>
+
+          <div class="phone phone-front">
+            <img src="iphone-16-pro.jpg" alt="iPhone présenté de face" class="phone-image">
+          </div>
+        </div>
+
+        <div class="hero-tag tag-top">
+          <span class="tag-dot"></span> COLLECTION IPHONE
+        </div>
+
+        <div class="hero-tag tag-bottom">
+          <span class="sparkle">✦</span> TROUVEZ VOTRE MODÈLE
+        </div>
+
+        <div class="floating-chip chip-one">
+          <span>✦</span>
+          <div><b>Design premium</b><small>Une sélection de modèles</small></div>
+        </div>
+
+        <div class="floating-chip chip-two">
+          <span>↗</span>
+          <div><b>Contact direct</b><small>Renseignements sur WhatsApp</small></div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section class="contact-section section" id="contact">
-    <div class="container">
-      <div class="section-heading">
+      <a class="scroll-cue" href="#collection"><span></span> DÉCOUVRIR LA COLLECTION</a>
+    </section>
+
+    <section class="section collection" id="collection">
+      <div class="section-heading reveal">
         <div>
-          <span class="section-label">GET IN TOUCH</span>
-          <h2>Let's Talk <span>Moto.</span></h2>
+          <div class="eyebrow">NOTRE SÉLECTION</div>
+          <h2>Choisissez votre <span>iPhone.</span></h2>
         </div>
-        <p>Have a question? Send us your enquiry.</p>
+        <p>
+          Explorez les modèles présentés et contactez-nous pour confirmer
+          le prix, la capacité, la couleur et la disponibilité.
+        </p>
       </div>
 
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div><span>Location</span><strong>Meknes, Morocco</strong></div>
-          </div>
+      <div class="toolbar reveal">
+        <label class="searchbox">
+          <span aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Rechercher un iPhone..."
+            aria-label="Rechercher un iPhone"
+          >
+        </label>
 
-          <div class="contact-item">
-            <div class="contact-icon">📩</div>
-            <div><span>Instagram</span><strong>@MarrakechiMotoStore</strong></div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">🏍️</div>
-            <div><span>Specialty</span><strong>Moto Parts & Accessories</strong></div>
-          </div>
+        <div class="filters" aria-label="Filtrer les produits">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="filter" type="button" data-filter="standard" aria-pressed="false">iPhone</button>
+          <button class="filter" type="button" data-filter="pro" aria-pressed="false">Pro</button>
+          <button class="filter" type="button" data-filter="compact" aria-pressed="false">Compact</button>
         </div>
+      </div>
 
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name"
-                placeholder="Your name" required>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card reveal" data-name="iphone 13" data-type="standard">
+          <a class="product-image" href="#contact" aria-label="Demander des informations sur l'iPhone 13">
+            <span class="product-badge">IPHONE</span>
+            <img src="iphone-13.jpg" alt="iPhone 13" loading="lazy">
+          </a>
+          <div class="product-info">
+            <div>
+              <h3>iPhone 13</h3>
+              <p>Design élégant et performant</p>
             </div>
+            <a class="product-arrow" href="#contact" aria-label="Contacter pour l'iPhone 13">↗</a>
+          </div>
+          <div class="product-foot">Prix et disponibilité sur demande</div>
+        </article>
 
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone"
-                placeholder="+212 ..." required>
+        <article class="product-card reveal" data-name="iphone 14" data-type="standard">
+          <a class="product-image" href="#contact" aria-label="Demander des informations sur l'iPhone 14">
+            <span class="product-badge">IPHONE</span>
+            <img src="iphone-14.jpg" alt="iPhone 14" loading="lazy">
+          </a>
+          <div class="product-info">
+            <div>
+              <h3>iPhone 14</h3>
+              <p>Une expérience polyvalente</p>
+            </div>
+            <a class="product-arrow" href="#contact" aria-label="Contacter pour l'iPhone 14">↗</a>
+          </div>
+          <div class="product-foot">Prix et disponibilité sur demande</div>
+        </article>
+
+        <article class="product-card reveal" data-name="iphone 15" data-type="standard">
+          <a class="product-image" href="#contact" aria-label="Demander des informations sur l'iPhone 15">
+            <span class="product-badge">IPHONE</span>
+            <img src="iphone-15.jpg" alt="iPhone 15" loading="lazy">
+          </a>
+          <div class="product-info">
+            <div>
+              <h3>iPhone 15</h3>
+              <p>Un style moderne au quotidien</p>
+            </div>
+            <a class="product-arrow" href="#contact" aria-label="Contacter pour l'iPhone 15">↗</a>
+          </div>
+          <div class="product-foot">Prix et disponibilité sur demande</div>
+        </article>
+
+        <article class="product-card reveal" data-name="iphone 16 pro" data-type="pro">
+          <a class="product-image" href="#contact" aria-label="Demander des informations sur l'iPhone 16 Pro">
+            <span class="product-badge">SÉRIE PRO</span>
+            <img src="iphone-16-pro.jpg" alt="iPhone 16 Pro" loading="lazy">
+          </a>
+          <div class="product-info">
+            <div>
+              <h3>iPhone 16 Pro</h3>
+              <p>La gamme Pro</p>
+            </div>
+            <a class="product-arrow" href="#contact" aria-label="Contacter pour l'iPhone 16 Pro">↗</a>
+          </div>
+          <div class="product-foot">Prix et disponibilité sur demande</div>
+        </article>
+
+        <article class="product-card reveal" data-name="iphone 16" data-type="standard">
+          <a class="product-image" href="#contact" aria-label="Demander des informations sur l'iPhone 16">
+            <span class="product-badge">IPHONE</span>
+            <img src="iphone-16.jpg" alt="iPhone 16" loading="lazy">
+          </a>
+          <div class="product-info">
+            <div>
+              <h3>iPhone 16</h3>
+              <p>Un modèle de nouvelle génération</p>
+            </div>
+            <a class="product-arrow" href="#contact" aria-label="Contacter pour l'iPhone 16">↗</a>
+          </div>
+          <div class="product-foot">Prix et disponibilité sur demande</div>
+        </article>
+
+        <article class="product-card reveal" data-name="iphone se" data-type="compact">
+          <a class="product-image" href="#contact" aria-label="Demander des informations sur l'iPhone SE">
+            <span class="product-badge">FORMAT COMPACT</span>
+            <img src="iphone-se.jpg" alt="iPhone SE" loading="lazy">
+          </a>
+          <div class="product-info">
+            <div>
+              <h3>iPhone SE</h3>
+              <p>Un format compact</p>
+            </div>
+            <a class="product-arrow" href="#contact" aria-label="Contacter pour l'iPhone SE">↗</a>
+          </div>
+          <div class="product-foot">Prix et disponibilité sur demande</div>
+        </article>
+      </div>
+
+      <p class="no-results" id="noResults" hidden>
+        Aucun modèle trouvé. Essayez une autre recherche.
+      </p>
+
+      <p class="disclaimer">
+        Les images servent à présenter les modèles. Les prix, couleurs,
+        capacités, états et disponibilités doivent être confirmés auprès
+        de RedPhone Marrakech avant toute commande.
+      </p>
+    </section>
+
+    <section class="section why" id="why">
+      <div class="why-panel reveal">
+        <div class="eyebrow">REDPHONE MARRAKECH</div>
+        <h2>Votre choix.<br>Votre <span>style.</span></h2>
+
+        <div class="benefits">
+          <div class="benefit">
+            <span>01</span>
+            <div>
+              <h3>Une sélection de modèles</h3>
+              <p>Retrouvez plusieurs modèles d'iPhone dans un seul espace.</p>
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="message">What do you need?</label>
-            <textarea id="message" name="message" rows="5"
-              placeholder="Tell us what product you are looking for..."
-              required></textarea>
+          <div class="benefit">
+            <span>02</span>
+            <div>
+              <h3>Des renseignements directs</h3>
+              <p>Demandez les prix et les informations avant de vous décider.</p>
+            </div>
           </div>
 
-          <button type="submit" class="btn btn-primary form-button">
-            Send Request <span>→</span>
-          </button>
-
-          <p class="form-message" id="formMessage" role="status"></p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-main">
-      <div class="footer-brand">
-        <a href="#home" class="logo">
-          <span class="logo-mark">M</span>
-          <span class="logo-text">MM<span>STORE</span></span>
-        </a>
-        <p>Performance. Precision. Power.</p>
-      </div>
-
-      <div class="footer-links">
-        <div>
-          <h4>Explore</h4>
-          <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#about">About</a>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="#contact">Enquiries</a>
-          <a href="#contact">Location</a>
-          <a href="#contact">Instagram</a>
+          <div class="benefit">
+            <span>03</span>
+            <div>
+              <h3>Un contact simple</h3>
+              <p>Contactez l'équipe pour discuter de votre modèle préféré.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <span>© 2026 MarrakechiMotoStore. All rights reserved.</span>
-      <span>Meknes, Morocco 🇲🇦</span>
-    </div>
-  </div>
-</footer>
+      <div class="why-art reveal" aria-label="Illustration décorative RedPhone">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="red-cube"><span>R</span></div>
+        <div class="art-caption">REDPHONE <b>•</b> MARRAKECH</div>
+      </div>
+    </section>
 
-<button class="back-top" id="backTop"
-  aria-label="Back to top" type="button">↑</button>
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <div class="eyebrow">BESOIN D'INFORMATIONS ?</div>
+        <h2>Parlons de votre <span>prochain iPhone.</span></h2>
+        <p>
+          Vous avez repéré un modèle ? Contactez RedPhone Marrakech
+          pour vérifier son prix et sa disponibilité.
+        </p>
 
-<script src="script.js"></script>
+        <div class="contact-actions">
+          <!-- Remplacez le numéro ci-dessous par le vrai numéro WhatsApp. -->
+          <a
+            class="btn btn-red"
+            href="https://wa.me/212600000000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Contacter sur WhatsApp ↗</a>
 
+          <a class="btn btn-outline" href="#collection">Revoir les modèles</a>
+        </div>
+
+        <small class="edit-note">
+          Démo de présentation — les informations commerciales sont à confirmer.
+        </small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home">
+      <span class="brand-mark">R</span>
+      <span>REDPHONE <b>MARRAKECH</b></span>
+    </a>
+    <span>© <span id="year"></span> RedPhone Marrakech</span>
+    <a href="#home">Retour en haut ↑</a>
+  </footer>
 </body>
 </html>
